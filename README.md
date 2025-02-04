@@ -5,7 +5,7 @@ Bem-vindo ao Dicionário da Família! Este projeto tem como objetivo registrar e
 
 📖 Sobre o Projeto
 
-Muitas famílias têm suas próprias gírias, expressões e palavras inventadas ao longo dos anos. Este dicionário compila essas palavras com suas respectivas traduções corretas e, em alguns casos, o contexto de uso.
+Muitas famílias têm suas próprias gírias, expressões e palavras inventadas ao longo dos anos. Este dicionário compila essas palavras com suas respectivas traduções corretas.
 
 🛠 Tecnologias Utilizadas
 
