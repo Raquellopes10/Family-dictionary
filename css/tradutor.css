@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+/* Bloco principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border: 0.3px solid #a0522d;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+.box {
+    width: 45%; /* Ajuste o tamanho conforme necessário */
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+}

@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/img/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-size: cover; /* Ajusta o tamanho da imagem */
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+    div.tres {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.texto{
+background:rgba(0, 0, 0, 0.5); ; /* Cor de fundo do quadrado (marrom) */
+padding: 20px; /* Espaçamento interno no texto */
+border: 0.5px solid #fff; /* Borda branca para destacar */
+border-radius: 25px; /* Bordas arredondadas */
+text-align: center;
+max-width: 90%;
+height: auto;
+width: 650px;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    font-family: Georgia,Light ;
+    
+}
+
+button.cadastro{
+    background-color: #CD853F;
+    width: 200px;
+    height: 45px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid #CD853F;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    
+}
+
+button.cadastro:hover{
+    background-color: #A0522D;
+    transform: scale(1.05);
+}
+
+.Next{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+nav {
+    position: absolute; /* Permite posicionar em relação ao body */
+    top: 5%; /* Define a distância do topo (ajuste conforme necessário) */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+    background-color: #894c3b; /* Fundo semitransparente para destaque */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+}
+
+.menu {
+    display: flex; /* Alinha os itens do menu em linha */
+    list-style: none; /* Remove os marcadores padrão */
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background: #333;
+}
+
+/* Submenu */
+.menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #894c3b;
+    display: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li ul li a {
+    padding: 10px;
+    background: #894c3b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        top: 2%;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button.cadastro {
+        width: 150px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button.cadastro {
+        width: 120px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .texto {
+        border-radius: 15px;
+    }
+}
