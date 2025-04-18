@@ -17,6 +17,4 @@ Consulte a lista de palavras e suas respectivas traduções.
 
 Caso uma palavra não esteja no dicionário, você pode sugerir uma nova entrada.
 
-(Opcional) Se houver um código envolvido, explique como rodar o projeto.
-
 Divirta-se explorando o Dicionário da Família e aproveite para rir das palavras que só fazem sentido dentro de casa! 😆
