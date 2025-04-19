@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(/img/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-image: url(/assets/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
     background-size: cover; /* Ajusta o tamanho da imagem */
    min-height: 100vh;
    display: flex;

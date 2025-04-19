@@ -6,49 +6,51 @@ body {
   padding: 20px;
 }
 
+/* Lista de ícones responsiva */
 .icon-list {
-  display: grid; /* Use grid para organizar melhor */
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-  gap: 20px; /* Espaçamento entre os itens */
-  list-style: none; /* Remove marcadores padrão */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
   padding: 0;
   margin: 0;
+  justify-items: center;
 }
 
 .icon-list li {
   display: flex;
-  justify-content: space-between; /* Distribui o texto à esquerda e o ícone à direita */
-  align-items: center; /* Alinha o texto e o ícone verticalmente */
-  gap: 10px; /* Espaço entre texto e ícone */
-  background: #fff; /* Fundo branco para cada item */
-  border-radius: 10px; /* Bordas arredondadas */
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 10px;
   border: 0.1px solid #a0522d;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  padding: 10px; /* Espaço interno */
-  transition: transform 0.2s, box-shadow 0.2s; /* Animação para hover */
-  width: 250px; /* Defina um tamanho fixo para garantir alinhamento */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 250px;
 }
 
 .icon-list li:hover {
-  transform: translateY(-5px); /* Eleva levemente no hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
- 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .icon-list img {
-  width: 24px; /* Ajuste do tamanho do ícone */
+  width: 24px;
   height: 24px;
-  left: 180px;
-  margin-left: auto; /* Isso empurra o ícone para a direita */
+  margin-left: auto;
 }
 
 .icon-list .text {
-  font-size: 16px; /* Tamanho do texto */
-  color: #a0522d; /* Cor do texto */
+  font-size: 16px;
+  color: #a0522d;
   font-weight: bold;
 }
+
+/* Modal */
 .modal {
-  display: none; /* Garante que o modal não apareça ao carregar a página */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -64,7 +66,6 @@ body {
   font-family: 'Poppins', serif;
   font-size: 25px;
   color: #a0522d;
-  font-weight: bold;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -72,6 +73,7 @@ body {
   text-align: center;
   position: relative;
   min-width: 300px;
+  max-width: 90%;
 }
 
 .close {
@@ -85,4 +87,37 @@ body {
 
 .close:hover {
   color: red;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets e telas médias */
+@media (max-width: 900px) {
+  .icon-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    font-size: 22px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .icon-list {
+    grid-template-columns: 1fr; /* Uma coluna só */
+  }
+
+  .icon-list li {
+    width: 100%;
+  }
+
+  .icon-list .text {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    font-size: 20px;
+    padding: 15px;
+  }
 }

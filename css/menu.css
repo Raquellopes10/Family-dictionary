@@ -4,6 +4,11 @@ body {
     align-items: center;
     justify-content: space-evenly;
     background-color: #fff;
+    margin: 0;
+    padding: 0;
+    padding: 0 20px; /* espaçamento de 20px nas laterais */
+    padding-top: 30px; /* ou o valor que quiser */
+
 }
 
 /* Bloco principal */
@@ -18,7 +23,8 @@ body {
     max-width: 90%;
     width: 1000px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 50px; /* Espaçamento entre o primeiro bloco e os outros */
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
 }
 
 /* Blocos menores */
@@ -26,19 +32,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*background: linear-gradient(135deg, #a0522d, #8b4513);*/
     background-color: #fff;
     padding: 20px;
     border: 0.5px solid #a0522d;
     border-radius: 25px;
     max-width: 90%;
-    width: 2000px;
-    height: 210px;
+    width: 1000px;
+    height: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 50px; /* Espaçamento entre o primeiro bloco e os outros */
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+    
 }
-
-
 
 /* Melhor alinhamento dos textos */
 .text, .family, .fami {
@@ -52,15 +58,15 @@ body {
 .family, .fami {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens no eixo horizontal */
-    text-align: center; /* Centraliza o texto */
+    align-items: center;
+    text-align: center;
 }
 
 /* Ajuste nas imagens */
 img.cafe, img.livro {
     width: 250px;
     height: auto;
-    z-index: 1; /* Garante que a imagem fique acima do fundo */
+    z-index: 1;
 }
 
 /* Botão com efeito de hover */
@@ -92,13 +98,49 @@ img.cafe, img.livro {
     transition: transform 0.2s ease;
 }
 
-/* Efeito de clique */
 .play-button:active::before {
     transform: scale(0.9);
 }
 
-/* Efeito ao passar o mouse */
 .play-button:hover {
     background-color: #b45f06;
     transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container, .palavras, .dizer {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .text, .family, .fami {
+        font-size: 24px;
+    }
+
+    img.cafe, img.livro {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text, .family, .fami {
+        font-size: 20px;
+    }
+
+    img.cafe, img.livro {
+        width: 150px;
+    }
+
+    .play-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .play-button::before {
+        left: 14px;
+        top: 8px;
+        border-width: 12px 0 12px 20px;
+    }
 }
